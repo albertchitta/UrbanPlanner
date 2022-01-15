@@ -41,7 +41,22 @@ namespace UrbanPlanner
             sherlocksPlace.Construct();
 
             oneTwoThree.Purchase("Scrooge McDuck");
-            oneTwoThree.PrintToConsole();
+            //oneTwoThree.PrintToConsole();
+
+            City megalopolis = new City("Megalopolis", "Albert Chittaphong");
+            megalopolis.AddBuilding(oneTwoThree);
+            megalopolis.AddBuilding(fourFiveSix);
+            megalopolis.AddBuilding(differentOne);
+            megalopolis.AddBuilding(sherlocksPlace);
+
+            megalopolis.PrintCityToConsole();
+
+            //foreach (Building building in megalopolis.Buildings)
+            //{
+            //    building.PrintBuildingToConsole();
+            //}
+
+            megalopolis.Buildings.ForEach(building => building.PrintBuildingToConsole());
         }
     }
 }
