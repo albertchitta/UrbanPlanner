@@ -10,6 +10,7 @@ namespace UrbanPlanner.Models
     {
         //constructors
         //overloading - multiple methods with same name but different signatures
+        //constructor method - same name and return type as the class
         public Building()
         {
 
@@ -58,15 +59,15 @@ namespace UrbanPlanner.Models
             _owner = name;
         }
 
-        public void PrintToConsole()
+        public void PrintBuildingToConsole()
         {
             //@ - string verbatim - will take every keystroke literally including new lines (Enter key)
-            string output = $@"
-{_address}---------------
+            string output = $@"{_address}---------------
 Designed by { _designer}
 Constructed on {_dateConstructed}
 Owned by {_owner}
-{Volume} cubic meters of space";
+{Volume} cubic meters of space
+";
             Console.WriteLine(output);
         }
     }
